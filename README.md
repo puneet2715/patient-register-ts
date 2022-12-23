@@ -28,5 +28,7 @@ The following libraries and frameworks were used in the development of this API:
 The following is a list of the API endpoints and their functionality:
 
 - POST /api/register: Register a new patient.
+
 - GET /api/psychiatrists/:hospitalId: Get the details of psychiatrists and their patients for a hospital.
+
 - GET /docs : Swagger documentation for the API.
