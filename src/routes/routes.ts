@@ -86,7 +86,7 @@ router.get("/psychiatrists/:hospitalId", async (req, res) => {
       const patientsCount = psychiatrist.patients.length;
       return { ...psychiatrist, patientsCount };
     });
-    return res.send({
+    return res.status(200).send({
       hospitalName: hospital.name,
       totalPsychiatristCount: psychiatrists.length,
       totalPatientsCount: hospital.patients.length,
