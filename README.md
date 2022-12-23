@@ -32,3 +32,7 @@ The following is a list of the API endpoints and their functionality:
 - GET /api/psychiatrists/:hospitalId: Get the details of psychiatrists and their patients for a hospital.
 
 - GET /docs : Swagger documentation for the API.
+
+## Database Schema
+
+[Link to DB Diagram](https://dbdiagram.io/d/63a499d499cb1f3b55a310a6)
