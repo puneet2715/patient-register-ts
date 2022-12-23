@@ -17,11 +17,13 @@ Steps to run this project:
 
 The following libraries and frameworks were used in the development of this API:
 
-- Express: A popular web framework for Node.js, used for defining the routes and handling the requests and responses of the API.
+- [Express](https://expressjs.com/): A popular web framework for Node.js, used for defining the routes and handling the requests and responses of the API.
 
-- TypeORM: An ORM (Object-Relational Mapper) that simplifies the interaction with the database and allows you to define the models and their relationships in a clear and concise way.
+- [TypeORM](https://typeorm.io/): An ORM (Object-Relational Mapper) that simplifies the interaction with the database and allows you to define the models and their relationships in a clear and concise way.
 
-- Swagger: A tool for documenting and testing APIs, used to generate the API documentation and provide a user-friendly interface for testing the APIs.
+- [Swagger](https://swagger.io/): A tool for documenting and testing APIs, used to generate the API documentation and provide a user-friendly interface for testing the APIs.
+
+- [Faker](https://fakerjs.dev/): A library for generating fake data, used to generate fake data for the database.
 
 ## API Endpoints
 
