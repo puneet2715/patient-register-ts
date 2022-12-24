@@ -7,8 +7,6 @@ import {
   IsPhoneNumber,
   Length,
   IsStrongPassword,
-  Min,
-  Max,
 } from "class-validator";
 
 @Entity()
@@ -40,7 +38,7 @@ export class Patient {
     minUppercase: 1,
     minNumbers: 1,
   })
-  // @Max(15)
+  @Length(8, 15)
   password: string;
 
   @Column()
