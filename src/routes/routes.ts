@@ -14,6 +14,7 @@ const router = express.Router();
  *         - name
  *         - address
  *         - email
+ *         - phoneNumber
  *         - password
  *         - photo
  *       properties:
@@ -25,7 +26,7 @@ const router = express.Router();
  *         email:
  *           type: string
  *           format: email
- *         phone:
+ *         phoneNumber:
  *           type: string
  *           minLength: 10
  *         password:
@@ -38,6 +39,13 @@ const router = express.Router();
  *         photo:
  *           type: string
  *           format: binary
+ *       example:
+ *           name: "Horace Schmitt"
+ *           address: "123, Main Street, Bangalore, Karnataka, India"
+ *           email: "abc@abc.com"
+ *           phoneNumber: "+911234567890"
+ *           password: "passwOrd@123"
+ *           patientphoto: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/47.jpg"
  */
 
 /**
@@ -107,6 +115,19 @@ router.post("/patient", async (req, res) => {
  *                           type: string
  *                         patientsCount:
  *                           type: integer
+ *
+ *               example:
+ *                   hospitalName: "Apollo Hospital"
+ *                   totalPsychiatristCount: 2
+ *                   totalPatientsCount: 3
+ *                   psychiatristDetails:
+ *                     - id: 1
+ *                       name: "Dr. John Doe"
+ *                       patientsCount: 6
+ *                     - id: 2
+ *                       name: "Dr. Horace Schmitt"
+ *                       patientsCount: 6
+ *
  *
  *       404:
  *         description: Hospital not found
