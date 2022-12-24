@@ -4,6 +4,41 @@ import { Patient } from "../entity";
 import * as express from "express";
 
 const router = express.Router();
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Patient:
+ *       type: object
+ *       required:
+ *         - name
+ *         - address
+ *         - email
+ *         - password
+ *         - photo
+ *       properties:
+ *         name:
+ *           type: string
+ *         address:
+ *           type: string
+ *           minLength: 10
+ *         email:
+ *           type: string
+ *           format: email
+ *         phone:
+ *           type: string
+ *           minLength: 10
+ *         password:
+ *           type: string
+ *           minLength: 8
+ *           maxLength: 15
+ *           minLowercase: 1
+ *           minUppercase: 1
+ *           minNumbers: 1
+ *         photo:
+ *           type: string
+ *           format: binary
+ */
 
 /**
  * @swagger
@@ -14,6 +49,8 @@ const router = express.Router();
  *       required: true
  *       content:
  *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Patient'
  *     responses:
  *       200:
  *         description: Patient registered successfully
@@ -61,6 +98,16 @@ router.post("/patient", async (req, res) => {
  *                   type: integer
  *                 psychiatristDetails:
  *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                         id:
+ *                           type: integer
+ *                         name:
+ *                           type: string
+ *                         patientsCount:
+ *                           type: integer
+ *
  *       404:
  *         description: Hospital not found
  *     tags:
