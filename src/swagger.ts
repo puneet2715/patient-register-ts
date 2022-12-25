@@ -9,7 +9,7 @@ const swaggerDefinition: swaggerJSDoc.SwaggerDefinition = {
   },
   servers: [
     {
-      url: "http://localhost:3000/api/",
+      url: "http://localhost:3000/api/v1",
     },
   ],
 };
